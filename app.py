@@ -275,7 +275,7 @@ with st.sidebar:
 
     st.subheader("Domain knowledge (RAG)")
     use_dictionaries = st.checkbox("Retrieve from built-in domain dictionaries", value=True)
-    use_keybert = st.checkbox("Use KeyBERT for keyphrases (if installed)", value=True)
+    use_keybert = st.checkbox("Use KeyBERT for keyphrases (if installed)", value=False)
     use_briefing = st.checkbox("Let the LLM read the whole meeting first (briefing)", value=True)
     domain_hints = st.text_area(
         "Your own terms / names / notes (optional)",
