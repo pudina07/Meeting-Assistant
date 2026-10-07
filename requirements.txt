@@ -1,0 +1,17 @@
+# core
+groq>=0.11
+openai>=1.40
+pydantic>=2.5
+python-dotenv>=1.0
+streamlit>=1.37
+
+# domain-RAG - optional, the pipeline degrades gracefully without them
+rapidfuzz>=3.0        # fast fuzzy / phonetic matching of heard-vs-glossary terms
+jellyfish>=1.0        # Metaphone phonetic keys ("cooper netties" ~ "Kubernetes")
+# keybert>=0.8        # DISABLED for deployment: pulls in sentence-transformers (~1 GB) and can exhaust the
+                      # RAM of free hosts. The app falls back to a frequency-based keyphrase extractor.
+
+# speaker diarization - optional, needs HF_TOKEN
+pyannote.audio>=3.1
+torch>=2.0
+numpy
